@@ -23,7 +23,7 @@ app.use('/api/customer',customerApiRouter)
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
-const url=process.env.MONGO_URI;
+const url=process.env.pool;
 
 const port=process.env.PORT
 

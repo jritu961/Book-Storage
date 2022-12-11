@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router();
-const {getAllBooks,getBook,deleteBook, addBook} = require('../controllers/users.controller')
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());
+const {getAllBooks,getBook,deleteBook, addBook} = require('../controllers/book.controller')
 
 
 router.post('/',addBook)
